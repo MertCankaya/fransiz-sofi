@@ -1,0 +1,8 @@
+{
+  "topic": "Konu Başlığı",
+  "definition": "Kural açıklaması. Fransızca kelimeleri [[kelime]] şeklinde çift parantez içine al.",
+  "examples": [
+    { "tr": "Türkçe cümle 1", "fr": "Fransızca cümle 1" }
+    // ... (tam 7 adet olacak)
+  ]
+}
