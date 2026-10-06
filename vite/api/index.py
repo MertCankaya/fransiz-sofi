@@ -19,10 +19,16 @@ app = FastAPI(
     openapi_url="/api/openapi.json",
 )
 
-# Yerel geliştirmede farklı portlardan (örn: 5173 -> 8000) erişim için CORS desteği
+# ZİRVE DERECE GÜVENLİK: Sadece kendi domaininize ve yerel React portuna izin verin
+ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "https://app-rosy-three-73.vercel.app",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
